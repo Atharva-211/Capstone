@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0 0;
+  padding: 0;
+  font-family:'Spartan',sans-serif;
+}
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+ul li {
+      font-family: 'Times New Roman', Times, serif;
+      display: inline-block;
+      float: left;
+      list-style: none;
+    }
+  
+ul li a{
+      color: white;
+      display: block;
+      text-decoration:none;
+      padding: 0 50px;   
+    }
+
+  
+  ul li a:hover{
+      color: rgb(0, 174, 255);
+    }
+	
+  nav{
+      width:50%px;
+      height: 100px;
+      line-height: 100px;
+      background-color:rgb(36, 36, 36)
+    }
+	
+	.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:rgb(36, 36, 36);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  font-size: 20px;
+  display: block;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+@keyframes heading{
+  from{
+  text-decoration-thickness: 0px;
+  text-shadow: 0px 0px 0px rgba(144, 238, 144, 0.668), 0 0 0px rgba(144, 238, 144, 0.668), 0 0 0px rgba(144, 238, 144, 0.668);;
+  font-size: 0px;
+  margin: 0 20px;
+  }
+
+  to{
+  text-decoration-thickness: 5px;
+  text-shadow: 2px 2px 3px black, 0 0 25px darkgreen, 0 0 5px lawngreen;
+  font-size: 50px;
+  margin: 0 20px;
+  }
+}
+
+                                                            /* branch img 1,6,10,14 are title image*/
+.branchimg-1 {
+  background-image: url("../IMAGES/img1.jpg");
+  min-height: 100%;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-6 {
+  background-image: url("../IMAGES/img6.jpg");
+  min-height: 100%;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-10 {
+  background-image: url("../IMAGES/img10.jpg");
+  min-height: 100%;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-14 {
+  background-image: url("../IMAGES/img14.jpg");
+  min-height: 100%;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-2 {
+  background-image: url("../IMAGES/img2.jpg");
+  min-height: 400px;
+    position: relative;
+  opacity: 1;
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-3 {
+  background-image: url("../IMAGES/img3.jpg");
+  min-height: 400px;
+    position: relative;
+  opacity: 1;
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-4 {
+  background-image: url("../IMAGES/img4.jpg");
+  min-height: 400px;
+    position: relative;
+  opacity: 1;
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-5 {
+  background-image: url("../IMAGES/img5.jpg");
+  min-height: 400px;
+    position: relative;
+  opacity: 1;
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-7 {
+  background-image: url("../IMAGES/img7.jpg");
+  min-height: 400px;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-8 {
+  background-image: url("../IMAGES/img8.jpg");
+  min-height: 400px;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-9 {
+  background-image: url("../IMAGES/img9.jpg");
+  min-height: 400px;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-11 {
+  background-image: url("../IMAGES/img11.jpg");
+  min-height: 400px;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-12 {
+  background-image: url("../IMAGES/img12.jpg");
+  min-height: 400px;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-13 {
+  background-image: url("../IMAGES/img13.jpg");
+  min-height: 400px;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-15 {
+  background-image: url("../IMAGES/img15.jpg");
+  min-height: 400px;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-16 {
+  background-image: url("../IMAGES/img16.jpg");
+  min-height: 400px;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branchimg-17 {
+  background-image: url("../IMAGES/img17.jpg");
+  min-height: 400px;
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  font-size: 50px;
+  letter-spacing: 5px;
+    mix-blend-mode: multiply;
+}
+
+.caption span.border1 {
+  background-color: #fff;
+  color: #111;
+  padding: 10px;
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .branchimg-1, .branchimg-2, .branchimg-3, .branchimg-4, .branchimg-5, .branchimg-6 {
+    background-attachment: scroll;
+  }
+}

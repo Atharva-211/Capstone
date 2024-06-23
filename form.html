@@ -1,0 +1,133 @@
+<html>
+<head>
+<link rel="stylesheet" href="CSS/form.css">
+</head>
+<script>
+    function Validate() {
+        var password = document.getElementById("Password").value;
+        var confirmPassword = document.getElementById("ConfirmPassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return saveFile();
+    }
+	
+        let saveFile = () => {
+            // Get the data from each element on the form.
+            const COMPANY = document.getElementById("COMPANY");
+            const FOUNDER = document.getElementById("FOUNDER");
+            const CEO = document.getElementById("CEO");
+            const PRODUCT = document.getElementById("PRODUCT");
+            const phone = document.getElementById("phone");
+			const mobile = document.getElementById("mobile");
+            const ADDRESS = document.getElementById("ADDRESS");
+            const DETAIL = document.getElementById("DETAIL");
+            const EMAIL = document.getElementById("EMAIL");
+			const BID = document.getElementById("BID");
+			const ConfirmPassword = document.getElementById("ConfirmPassword");
+
+            // This variable stores all the data.
+            let data = "\r COMPANY NAME: " + COMPANY.value + " \r\n " 
+					   + "FOUNDER'S NAME: " + FOUNDER.value + " \r\n " 
+					   + "CEO: " + CEO.value + " \r\n " 
+					   + "PRODUCT TYPE: " + PRODUCT.value + " \r\n " 
+					   + "PHONE NO: " + phone.value + " \r\n " 
+					   + "MOBILE NO: " + mobile.value + " \r\n " 
+					   + "ADDRESS: " + ADDRESS.value + " \r\n " 
+					   + "COMPANY/FOUNDER DETAIL : " + DETAIL.value + " \r\n " 
+					   + "EMAIL: " + EMAIL.value + " \r\n "
+					   + "BUSINESS ID: " + BID.value + " \r\n "
+					   + "PASSWORLD: " + ConfirmPassword.value;
+            console.log(data); //printing form data into the console
+            // Convert the text to BLOB.
+            const textToBLOB = new Blob([data], { type: "text/plain" });
+            var filename = new Date();
+            var month =new Date(); //months from 1-12
+            month = month.getMonth();
+
+            var day = new Date();
+            var day = day.getUTCDate();
+
+            var year = new Date();
+            var year = year.getUTCFullYear();
+
+            newdate = year + "/" + month + "/" + day;
+            const sFileName = filename; // The file to save the data.
+
+            let newLink = document.createElement("a");
+            newLink.download = new Date();
+
+            if (window.webkitURL != null) {
+                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+            } else {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+                newLink.style.display = "none";
+                document.body.appendChild(newLink);
+            }
+
+            newLink.click();
+        };
+</script>
+<body>
+ <div class="fix">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="branch.html">BRANCHES</a></li>
+                    <li><a href="BUSINESS\varden.html">BUSINESS</a></li>
+                    <li><a href="form.html">REGISTER</a></li>
+                    <!-- <li style="float :right"><a href="team.html">TEAM</a></li> -->
+                </ul>
+            </nav>
+
+<form>  
+
+  <div class="container">  
+  <center>  <h1>Registeration Form</h1> </center>  
+  <hr>  
+  <b>
+  <label> FIRM NAME </label>   
+<input type="text" name="firstname" id="COMPANY" placeholder= "COMPANY NAME" size="15" required />   
+<label> FOUNDER'S NAME: </label>   
+<input type="text" name="middlename" placeholder="FOUNDER'S NAME" id="FOUNDER" size="15" required />   
+<label> CEO: </label>    
+<input type="text" name="lastname" placeholder="CEO" id="CEO" size="15"required />   
+
+<label> BUSINESS TYPE: </label>    
+<input type="text" name="lastname" id="PRODUCT" placeholder="PRODUCT TYPE" size="15"required />   
+  
+<label>   
+CONTACT :  
+</label>  
+<input type="number" name="phone" placeholder="Enter phone no" id="phone" size="2"/>   
+<input type="number" name="mobile" placeholder="Enter mobile no." id="mobile" size="10"/ required>   
+
+OFFICE ADDRESS :  
+<textarea cols="80" rows="3" placeholder="Current Address" id="ADDRESS" value="address" required>  
+</textarea>
+
+PRODUCT/SERVICE DETAILS :  
+<textarea cols="80" rows="5" placeholder="COMPANY/FOUNDER DETAIL" id="DETAIL" value="address" required>  
+</textarea>
+  
+ <label for="email">EMAIL</label>  
+ <input type="email" placeholder="Enter Email" id="EMAIL" name="email" required>  
+ 
+ <label for="BID">BUSINESS ID:</label>  
+ <input type="number" placeholder="BUSINESS ID" id="BID" name="BID" required>  
+  
+    <label for="psw">PASSWORLD</label>  
+    <input type="password" placeholder="Enter Password" id="Password" required>  
+  
+    <label for="psw-repeat">RE-ENTER PASSWORLD</label>  
+    <input type="password" placeholder="Retype Password" id="ConfirmPassword" required> 
+	
+    <button type="Submit" id="bt" onclick="return Validate()" class="registerbtn">Register</button>  
+		</b>
+	
+</form>  
+
+
+</body>
+</html>
